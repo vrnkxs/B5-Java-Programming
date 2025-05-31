@@ -28,8 +28,7 @@ public class MyName {
         char letter1 = 2347;
         System.out.println(letter1);
 
-        char letter2 = 4654;
+        char letter2 = 694;
         System.out.println(letter2);
-
     }
 }

@@ -20,9 +20,14 @@ public class CellPhone {
         boolean hasCamera = true;
         char sim = 'A';
 
-        System.out.println("I have an" + model + "from" + brand + ".");
-        System.out.println("It came with " + color + "andwith storage of " + storage + " GB.");
-        System.out.println("For the Sim type " + " with a camera: " + hasCamera + ", the total price is $" + price);
+        //with multiple println statement
+        System.out.println("I have an " + model + " from " + brand + ".");
+        System.out.println("It came with " + color + " color and with storage of " + storage + " GB.");
+        System.out.println("For the SIM type " + sim + " with a camera: " + hasCamera + ", the total price is $" + price);
 
+        System.out.println();
+
+        //with 1 println statement
+        System.out.println("I have an " + model + " from " + brand + ".\n" + "It came with " + color + " color and with storage of " + storage + " GB.\n" + "For the SIM type " + sim + " with a camera: " + hasCamera + ", the total price is $" + price);
     }
 }
