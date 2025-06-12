@@ -10,7 +10,7 @@ public class ATM {
         double balance = 100_000.00;
 
         System.out.print("Welcome to ATM\n\tPlease, insert your card. \n\tPlease, enter your pin: ");
-        int userInputVar = keyboard.nextInt();
+        int userInputVar = keyboard.nextInt(); // 8768756
 
         //check if the pin is 4 digits
         //4 digits -> 1000.....9999
@@ -30,12 +30,36 @@ public class ATM {
                 int userChoice = keyboard.nextByte();
 
                 //if (!(userChoice >= 1 && userChoice <= 4)) {
-
+                if (userChoice < 1 || userChoice > 4) {
+                    System.out.println("\n\tWrong choice! Valid choices are 1 - 4. Exiting the account.");
+                } else {
+                    if (userChoice == 1) {
+                        System.out.println("\t\t\t\tYour balance is: $" + balance);
+                    } else if (userChoice == 2) {
+                        System.out.print("\t\t\t\tEnter the amount you want to deposit: ");
+                        //double userDeposit = keyboard.nextDouble();
+                        //balance = balance + userDeposit;
+                        //balance += userDeposit;
+                        balance += keyboard.nextDouble();
+                        System.out.println("\t\t\t\tYour new balance is: $" + balance);
+                    } else if (userChoice == 3) {
+                        System.out.print("\t\t\t\tEnter the amount you want to withdraw: ");
+                        double userWithdraw = keyboard.nextDouble();
+                        if (userWithdraw > balance) {
+                            System.out.println("\t\t\t\tYou don't have enough money to withdraw that amount.");
+                        } else {
+                            balance -= userWithdraw; //balance = balance - userWithdraw;
+                            System.out.println("\t\t\t\tYour new balance is: $" + balance);
+                        }
+                    } else {
+                        System.out.println("\n\t\t\tThanks for the visit. Your moneys is in safe hands. Exiting.... Bye!");
+                    }
+                }
             } else {
                 System.out.println("\n\tWrong pin!");
             }
-
         }
+
 
 
     }
