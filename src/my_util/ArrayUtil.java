@@ -87,6 +87,25 @@ public class ArrayUtil {
     }
 
     /**
+
+     This method checks the given String array whether contains given word
+     @param words given String array
+     @param word given word
+     @return boolean if array contains word*/
+    public static boolean contains(String[] words, String word){
+        boolean result = false;
+
+        for (String eachElem : words){
+            if (eachElem.equalsIgnoreCase(word)){
+                result = true;
+                break;
+            }
+        }
+
+        return result;
+    }
+
+    /**
      * This method calculates total of all elements
      * @param arr is the given int array
      * @return sum of all elements
