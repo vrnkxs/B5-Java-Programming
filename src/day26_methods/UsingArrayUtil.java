@@ -1,8 +1,8 @@
 package day26_methods;
 
 import my_util.*;
-import java.util.Arrays;
 
+import java.util.Arrays;
 
 public class UsingArrayUtil {
     public static void main(String[] args) {
@@ -32,6 +32,7 @@ public class UsingArrayUtil {
 
         //{23, 54, 65, 234, 754, -23, 453};
         System.out.println( ArrayUtil.indexOf(nums, -23) );
+
         System.out.println("----------------------");
 
         String [] words = {"java", "softskills", "mentors"};
